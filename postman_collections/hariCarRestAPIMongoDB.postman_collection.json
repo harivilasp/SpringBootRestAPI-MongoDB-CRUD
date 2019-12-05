@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "1137c137-cc5b-4acc-85e3-22c803a9b315",
+		"name": "hariCarRestAPIMongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddCarRequest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"modelNo\":\"BZ330\",\n\t\"carName\":\"Bugadi B33\",\n\t\"dateOfSale\":\"15-Nov-2019\",\n\t\"price\":660000\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/addCar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addCar"
+					]
+				},
+				"description": "Add Car in collection"
+			},
+			"response": []
+		},
+		{
+			"name": "FindCarByModelNo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/findAllCars/BZ330",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"findAllCars",
+						"BZ330"
+					]
+				},
+				"description": "Fethces Car Details from Appropriate Model No"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Car From Model No",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/delete/BZ330",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delete",
+						"BZ330"
+					]
+				},
+				"description": "Deletes details of The Car of Specific Model No"
+			},
+			"response": []
+		}
+	]
+}
